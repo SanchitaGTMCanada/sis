@@ -115,7 +115,7 @@ const statusStyles = {
 
 export default function Dashboard() {
   return (
-    <DashboardLayout>
+<>
 
       {/* Welcome banner */}
       <section className="relative mb-8 overflow-hidden rounded-2xl bg-[#280A47] px-6 py-8 text-white shadow-xl shadow-[#280A47]/10 sm:px-9 sm:py-10">
@@ -465,6 +465,6 @@ export default function Dashboard() {
 
       </section>
 
-    </DashboardLayout>
+ </>
   );
 }

@@ -46,10 +46,11 @@ const navigation = [
   icon: BookOpen,
   href: "/programs",
 },
-      {
-        label: "Course Registration",
-        icon: CalendarDays,
-      },
+     {
+  label: "Course Registration",
+  icon: ClipboardList,
+  href: "/registration",
+},
     ],
   },
   {

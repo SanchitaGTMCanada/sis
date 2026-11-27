@@ -135,7 +135,7 @@ export default function AdmissionsPage() {
   }, [search, statusFilter]);
 
   return (
-    <DashboardLayout>
+  <>
       <div className="space-y-7">
 
         {/* Page heading */}
@@ -447,6 +447,6 @@ export default function AdmissionsPage() {
           </div>
         </div>
       )}
-    </DashboardLayout>
+    </>
   );
 }
