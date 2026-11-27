@@ -56,10 +56,11 @@ const navigation = [
   {
     title: "ACADEMIC MANAGEMENT",
     items: [
-      {
-        label: "Timetable",
-        icon: CalendarDays,
-      },
+     {
+  label: "Timetable",
+  icon: CalendarDays,
+  href: "/timetable",
+},
       {
         label: "Academic Records",
         icon: FileText,
