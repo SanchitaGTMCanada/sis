@@ -62,7 +62,6 @@ import {
 
 } from "lucide-react";
 
-import DashboardLayout from "@/components/layout/DashboardLayout";
 
 /* --------------------------------------------------
 
@@ -1982,7 +1981,7 @@ export default function StudentProfilePage() {
 
     return (
 
-      <DashboardLayout>
+     <>
 
         <div className="flex min-h-[60vh] flex-col items-center justify-center text-center">
 
@@ -2017,9 +2016,7 @@ export default function StudentProfilePage() {
           </Link>
 
         </div>
-
-      </DashboardLayout>
-
+      </>
     );
 
   }
@@ -2034,8 +2031,9 @@ export default function StudentProfilePage() {
 
   return (
 
-    <DashboardLayout>
+   
 
+          <>
       <div className="space-y-6">
 
         {/* Breadcrumb */}
@@ -2590,8 +2588,9 @@ export default function StudentProfilePage() {
 
       )}
 
-    </DashboardLayout>
-
+   
+ </>
   );
+ 
 
 }

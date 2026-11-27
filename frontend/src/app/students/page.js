@@ -134,8 +134,8 @@ export default function StudentsPage() {
   };
 
   return (
-    <DashboardLayout>
-
+   
+<>
       {/* Page heading */}
       <section className="mb-8 flex flex-wrap items-center justify-between gap-4">
         <div>
@@ -491,7 +491,7 @@ export default function StudentsPage() {
 
 
 
-    </DashboardLayout>
+   </>
   );
 }
 

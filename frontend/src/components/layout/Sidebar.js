@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import {
   GraduationCap,
@@ -37,12 +38,14 @@ const navigation = [
       {
         label: "Admissions",
         icon: ClipboardList,
+        href: "/admissions",
         count: 24,
       },
-      {
-        label: "Programs & Courses",
-        icon: BookOpen,
-      },
+    {
+  label: "Programs & Courses",
+  icon: BookOpen,
+  href: "/programs",
+},
       {
         label: "Course Registration",
         icon: CalendarDays,
@@ -96,14 +99,24 @@ const navigation = [
 export default function Sidebar({ open, onClose }) {
   const pathname = usePathname();
 
+  // Prevent server/client active-state mismatch
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const isActive = (item) => {
-    if (!item.href) return false;
+    if (!mounted || !item.href) return false;
 
     if (item.href === "/") {
       return pathname === "/";
     }
 
-    return pathname === item.href || pathname.startsWith(`${item.href}/`);
+    return (
+      pathname === item.href ||
+      pathname.startsWith(`${item.href}/`)
+    );
   };
 
   const renderNavigationItem = (item) => {
@@ -151,6 +164,7 @@ export default function Sidebar({ open, onClose }) {
       </>
     );
 
+    // Always render links as links
     if (item.href) {
       return (
         <Link
@@ -165,6 +179,7 @@ export default function Sidebar({ open, onClose }) {
       );
     }
 
+    // Items without routes remain disabled/coming soon
     return (
       <button
         key={item.label}

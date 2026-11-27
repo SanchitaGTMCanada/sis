@@ -1,5 +1,6 @@
 
 import "./globals.css";
+import DashboardLayout from "@/components/layout/DashboardLayout";
 
 export const metadata = {
   title: "PI-NC | Student Information System",
@@ -10,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <DashboardLayout>
+          {children}
+        </DashboardLayout>
+      </body>
     </html>
   );
 }
